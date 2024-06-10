@@ -14,7 +14,11 @@ function App() {
 }
 
 function DisplayImage() {
-  return <img src="images/drawers.jpg" alt="avatar-michelle" className="drawers" />;
+  return (
+    <div className="drawers">
+      <img src="images/drawers.jpg" alt="avatar-michelle" />
+    </div>
+  );
 }
 
 function DisplayContent() {

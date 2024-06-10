@@ -24,6 +24,7 @@ body {
   height: 100vh;
   width: 700px;
   margin: auto;
+  padding: 0 2rem;
 }
 
 .card {
@@ -34,12 +35,14 @@ body {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+
   .drawers {
-    width: 300px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    height: 280px;
+    img {
+      max-width: 300px;
+      min-height: 280px;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
   }
   .content {
     position: relative;
@@ -102,6 +105,29 @@ body {
           }
         }
       }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .card {
+    flex-direction: column;
+    width: 500px;
+    box-shadow: none;
+    .drawers {
+      img {
+        max-width: 400px;
+        min-height: 280px;
+        display: block;
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 10px;
+      }
+    }
+    .content {
+      width: 400px;
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
     }
   }
 }
